@@ -33,5 +33,12 @@ aws-otel-eks-ci-vhcrs   1/1     Running   0          9m26s   192.168.78.46    ip
 
 
 At this point the OTEL collector is installed and sending CloudWatch Insights metrics to CloudWatch.
-Open your CloudWatch console, and head to Metrics > All Metrics. And you'll notice :
-![CloudWatch screenshot](/images/observability-with-adot/container-insights-cloudwatch-metrics.png)
+Open your CloudWatch console, and head to Metrics > All Metrics. 
+![Cloudwatch nav screenshot](/images/observability-with-adot/cloudwatch-container-insights-nav.png)
+
+Then select the Pod level metrics:
+![Cloudwatch metrics screenshot](/images/observability-with-adot/cloudwatch-container-insights-metrics.png)
+
+Filter to just CPU Utilization, and change the visualization to be of type Number. And you'll have a dashboard of the deployed Pod's CPU Utilization:
+![CloudWatch screenshot](/images/observability-with-adot/cloudwatch-container-insights-dashboard.png)
+
