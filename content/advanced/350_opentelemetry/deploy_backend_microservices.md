@@ -13,7 +13,7 @@ The microservice we are going to deploy looks like this one:
 
 Grab a copy of the microservices:
 ```bash
-git clone https://github.com/overdrive3000/adot-demo.git
+git clone https://github.com/con204/adot-demo.git
 cd adot-demo
 ```
 
