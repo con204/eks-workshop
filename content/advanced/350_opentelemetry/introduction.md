@@ -22,3 +22,10 @@ Benefits of using ADOT:
 The following diagram shows how we'll be configuring our OpenTelemetry Collector in this module:
 
 ![Observability with AWS Distro for Open Telemetry Workshop Architecture](/images/observability-with-adot/overview-architecture-diagram.png)
+
+## Demo Microservice infrastructure
+
+The microservice we are going to deploy looks like this one:
+
+![Architecture Diagram of Microservices](/images/observability-with-adot/microservice.png)
+
