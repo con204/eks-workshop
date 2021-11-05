@@ -13,7 +13,7 @@ the EKS IAM authentication, so we will disable it and rely on the IAM role inste
 - Select **AWS SETTINGS**
 - Turn off **AWS managed temporary credentials**
 - Close the Preferences tab
-![c9disableiam](/images/prerequisites/c9disableiam.png)
+![c9disableiam](/images/observability-with-adot/cloud9-settings.png)
 
 To ensure temporary credentials aren't already in place we will also remove
 any existing credentials file:
