@@ -47,14 +47,14 @@ password: eksworkshop
 {{< /output >}}
 
 In the Grafana console select **Configurations**, and choose **Data sources** in the sub-menu.
-![Grafana console - configurations](/images/observability-with-adot/grafana-configuration.md)
+![Grafana console - configurations](/images/observability-with-adot/grafana-configuration.png)
 
 
 Select "Add Data source"
-![Grafana console - add data source](/images/observability-with-adot/grafana-add-data-source.md)
+![Grafana console - add data source](/images/observability-with-adot/grafana-add-data-source.png)
 
 Choose Prometheus
-![Grafana console - data source - prometheus](/images/observability-with-adot/grafana-data-sources-prometheus.md)
+![Grafana console - data source - prometheus](/images/observability-with-adot/grafana-data-sources-prometheus.png)
 
 
 Get the endpoint for our AMP instance, and copy & paste it into Grafana for the HTTP > URL configuration
