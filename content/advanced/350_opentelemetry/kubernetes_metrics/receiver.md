@@ -23,7 +23,10 @@ kubectl apply -f kubernetes/adot/otel-prometheus.yaml
 ```
 
 Let's check that the scraper is deployed and running. Wait until `READY` shows `1/1`.
-{{< output >}}$ kubectl get pods -n aws-otel-eks -l name=aws-otel-eks-prometheus
+```bash
+kubectl get pods -n aws-otel-eks -l name=aws-otel-eks-prometheus
+```
+{{< output >}}
 NAME                                       READY   STATUS    RESTARTS   AGE
 aws-otel-eks-prometheus-5bb78cb869-hrmf4   1/1     Running   0          5m
 {{< /output >}}

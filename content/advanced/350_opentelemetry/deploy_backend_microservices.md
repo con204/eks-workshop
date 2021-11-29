@@ -23,7 +23,10 @@ kubectl apply -f kubernetes/databases/
 ```
 
 Quickly, check all the database services are deployed and ready to receive requests:
-{{< output >}}$ kubectl get pods
+```bash
+kubectl get pods
+```
+{{< output >}}
 NAME                                                 READY   STATUS    RESTARTS   AGE
 employee-mongo-67cd95c7d9-jdhfb                      1/1     Running   0          13s
 jaeger-tracing-salaryamount-mysql-76cf744c75-t9q85   1/1     Running   0          13s
@@ -36,7 +39,10 @@ kubectl apply -f kubernetes/backend/
 ```
 
 In the backend service manifest, we specified an ingress with ELB Load Balancer. Let’s wait until the ELB is fully deployed:
-{{< output >}}$ kubectl get svc jaeger-tracing-nodejs-service
+```bash
+kubectl get svc jaeger-tracing-nodejs-service
+```
+{{< output >}} 
 NAME                            TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)          AGE
 jaeger-tracing-nodejs-service   LoadBalancer   10.100.104.173   a814b34247f984307ac5d078b6e3f1b0-1991136339.us-west-2.elb.amazonaws.com   8081:32521/TCP   13s
 {{< /output >}}

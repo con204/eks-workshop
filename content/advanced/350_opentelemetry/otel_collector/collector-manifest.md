@@ -7,7 +7,7 @@ draft: false
 
 ### Configuring AWS Distro for Open Telemetry Collector Kubernetes manifest
 
-Open `$ vim kubernetes/adot/otel-container-insights-infra.yaml`. Inside you’ll notice an annotation for
+Open `$ less kubernetes/adot/otel-container-insights-infra.yaml`. Inside you’ll notice an annotation for
 the `AWSDistroOpenTelemetryRole` in the `ServiceAccount` resource. 
 {{< output >}}---
 # create cwagent service account and role binding

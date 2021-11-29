@@ -18,7 +18,10 @@ kubectl apply -f kubernetes/frontend/
 ```
 
 Now we wait for all the pods to be up and running:
-{{< output >}}$ kubectl get pods
+```bash
+kubectl get pods
+```
+{{< output >}} 
 NAME                                                 READY   STATUS    RESTARTS   AGE
 employee-mongo-67cd95c7d9-26w8x                      1/1     Running   0          29m
 jaeger-tracing-frontend-service-5dd45d5bb-rdppb      1/1     Running   0          22m
@@ -36,10 +39,12 @@ Note: It can take a few minutes for all the pods to show a `Status` of `Running`
 
 Check the frontend's ingress Load Balancer was provisioned:
 ```bash
-$ kubectl get svc jaeger-tracing-frontend-service
-NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE
-front-end-lb LoadBalancer 10.100.2.16 *a9e7c954d96114324b80da103b888b79**-902876639.us-west-2.elb.amazonaws.**com* 80:31627/TCP 2m16s
+kubectl get svc jaeger-tracing-frontend-service
 ```
+{{< output >}} 
+NAME         TYPE         CLUSTER-IP  EXTERNAL-IP                                                               PORT(S)      AGE
+front-end-lb LoadBalancer 10.100.2.16 *a9e7c954d96114324b80da103b888b79**-902876639.us-west-2.elb.amazonaws.com 80:31627/TCP 2m16s
+{{< /output >}}
 
 {{% notice info %}}
 Note: If you do not see an External-IP, re-run the command and wait till it appears (this can take a minute or two)

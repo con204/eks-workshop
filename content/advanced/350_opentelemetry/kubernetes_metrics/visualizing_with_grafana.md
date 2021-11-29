@@ -15,7 +15,7 @@ In the Grafana web-console, let's head to Explore
 ![grafana explore](/images/observability-with-adot/grafana-explore.png)
 
 Let's run a test [PromQL query](https://prometheus.io/docs/prometheus/latest/querying/basics/) against our AMP
-workspace. In the query bar type in `etcd_object_counts`, then click the Run Query button on the top right.
+workspace. In the query bar type in `apiserver_request_total`, then click the Run Query button on the top right.
 If this query returns data, we can confirm that we are 1) Ingesting Kubernetes Control Plane metrics to our AMP
 workspace. 2) Grafana is able to connect to our AMP workspace.
 

@@ -39,7 +39,7 @@ After clicking 'GET EMPLOYEE' we'll get a modal with the Name & Occupation we pr
 
 {{% notice note %}}
 Note: If you want to customize your employee. You'll need to provide an occupation that is listed in the
-[initdb.sql](https://github.com/conf204/adot-demo/blob/main/jaeger-tracing-salary-postgres/initdb.sql#L8-L12)
+[initdb.sql](https://github.com/con204/adot-demo/blob/main/jaeger-tracing-salary-postgres/initdb.sql#L8-L12)
 file.
 {{% /notice %}}
 

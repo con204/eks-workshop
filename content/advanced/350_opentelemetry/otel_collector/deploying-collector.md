@@ -18,13 +18,20 @@ kubectl apply -f kubernetes/adot/otel-container-insights-infra.yaml
 ```
 
 Check to see that the OTEL collector’s DaemonSet is running on each node:
-{{< output >}}$ kubectl get nodes
+```bash
+kubectl get nodes
+```
+{{< output >}} 
 NAME                                           STATUS   ROLES    AGE    VERSION
 ip-192-168-29-122.us-west-2.compute.internal   Ready    <none>   2d6h   v1.21.2-eks-55daa9d
 ip-192-168-43-204.us-west-2.compute.internal   Ready    <none>   2d6h   v1.21.2-eks-55daa9d
 ip-192-168-70-26.us-west-2.compute.internal    Ready    <none>   2d6h   v1.21.2-eks-55daa9d
+{{< /output >}}
 
-$ kubectl get pods -n aws-otel-eks -o wide
+```bash
+kubectl get pods -n aws-otel-eks -o wide
+```
+{{< output >}} 
 NAME                    READY   STATUS    RESTARTS   AGE     IP               NODE                                           NOMINATED NODE   READINESS GATES
 aws-otel-eks-ci-47x6x   1/1     Running   0          9m26s   192.168.39.13    ip-192-168-43-204.us-west-2.compute.internal   <none>           <none>
 aws-otel-eks-ci-hj8vs   1/1     Running   0          9m26s   192.168.13.246   ip-192-168-29-122.us-west-2.compute.internal   <none>           <none>
@@ -32,8 +39,11 @@ aws-otel-eks-ci-vhcrs   1/1     Running   0          9m26s   192.168.78.46    ip
 {{< /output >}}
 
 
-At this point the OTEL collector is installed and sending CloudWatch Insights metrics to CloudWatch.
-Open your CloudWatch console, and head to Metrics > All Metrics. 
+At this point the OTEL collector is installed and sending CloudWatch Insights metrics to CloudWatch. We can get Cloudwatch metrics URL by running following command:
+
+```bash
+echo "https://${AWS_REGION}.console.aws.amazon.com/cloudwatch/home?region=${AWS_REGION}#metricsV2:graph=~()"
+```
 ![Cloudwatch nav screenshot](/images/observability-with-adot/cloudwatch-container-insights-nav.png)
 
 Then select the Pod level metrics:
