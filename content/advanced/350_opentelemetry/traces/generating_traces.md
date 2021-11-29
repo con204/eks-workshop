@@ -23,8 +23,17 @@ Now that traces are enabled, let’s head back to our application and add a new 
 echo http://${SERVICE_IP}/
 ```
 
-Open that URL in your web browser, and create a new employee. We'll name our employee "George Burdell" who's
-occupation is "Software Engineer".
+Open that URL in your web browser, and create a new employee. You can use any First Name and Last Name. For Ocuppation choose one from the following table:
+
+| Occupation |
+|------------|
+| Apprentice Software Engineer |
+| Software Engineer |
+| Senior Software Engineer |
+| Lead Software Engineer |
+| Principal Software Engineer |
+
+For our example we will use "George Burdell" who's occupation is "Software Engineer".
 ![Screenshot of employee creation](/images/observability-with-adot/frontend-create-employee.png)
 
 After clicking the 'ADD EMPLOYEE' button, you should get a success model with the Employee ID.
@@ -36,10 +45,4 @@ Then we'll close the modal, and copy that Employee ID into the Get Employee fiel
 
 After clicking 'GET EMPLOYEE' we'll get a modal with the Name & Occupation we provided earlier.
 ![Screenshot of employee lookup success](/images/observability-with-adot/frontend-lookup-employee-success.png)
-
-{{% notice note %}}
-Note: If you want to customize your employee. You'll need to provide an occupation that is listed in the
-[initdb.sql](https://github.com/con204/adot-demo/blob/main/jaeger-tracing-salary-postgres/initdb.sql#L8-L12)
-file.
-{{% /notice %}}
 
